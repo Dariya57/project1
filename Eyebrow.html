@@ -13,12 +13,11 @@
 </header>
 
 <main>
-  <section id="eyebrow-shaping">
+  <section>
     <h2>Eyebrow Shaping Services</h2>
     <p>Our eyebrow shaping services are designed to give you the perfect brows to complement your face. Choose from a variety of shaping options to achieve your desired look.</p>
 
-
-    <div class="service-item">
+    <div>
       <h3>Classic Eyebrow Shaping</h3>
       <figure>
         <img src="https://classiceyebrows.com.au/wp-content/uploads/2023/09/Book-Now-3.png" alt="Classic Eyebrow Shaping" width="280" height="290">
@@ -28,8 +27,7 @@
       <p>Our classic eyebrow shaping service gives you well-defined brows with a natural look. Ideal for everyday wear.</p>
     </div>
 
-
-    <div class="service-item">
+    <div>
       <h3>High-Definition Eyebrow Shaping</h3>
       <figure>
         <img src="https://hdbrows.com/media/amasty/blog/high-definition-brows.jpeg" alt="High-Definition Eyebrow Shaping" width="280" height="290">
@@ -39,8 +37,7 @@
       <p>Get a sharp, defined look with our high-definition eyebrow shaping, perfect for special occasions or a standout daily look.</p>
     </div>
 
-
-    <div class="service-item">
+    <div>
       <h3>Eyebrow Threading</h3>
       <figure>
         <img src="https://www.eyeadorethreading.com/wp-content/uploads/2023/12/image-16-1024x585.webp" alt="Eyebrow Threading" width="280" height="290">
@@ -50,18 +47,15 @@
       <p>Experience the precision of eyebrow threading, which offers a clean and defined look while minimizing discomfort.</p>
     </div>
 
-
     <blockquote>
       "Well-shaped eyebrows frame the face and enhance your natural beauty."
     </blockquote>
-
 
     <ul>
       <li>Classic Eyebrow Shaping</li>
       <li>High-Definition Eyebrow Shaping</li>
       <li>Eyebrow Threading</li>
     </ul>
-
 
     <dl>
       <dt>Classic Eyebrow Shaping</dt>
@@ -72,22 +66,27 @@
       <dd>Precise threading technique for a clean finish.</dd>
     </dl>
 
-
     <form action="submit_form.php" method="post">
       <fieldset>
         <legend>Book an Eyebrow Shaping Appointment</legend>
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
+        <label>Name:</label>
+        <label>
+          <input type="text" name="name" required>
+        </label>
 
-        <label for="service">Select Service:</label>
-        <select id="service" name="service">
-          <option value="classic">Classic Eyebrow Shaping</option>
-          <option value="hd">High-Definition Eyebrow Shaping</option>
-          <option value="threading">Eyebrow Threading</option>
-        </select>
+        <label>Select Service:</label>
+        <label>
+          <select name="service">
+            <option value="classic">Classic Eyebrow Shaping</option>
+            <option value="hd">High-Definition Eyebrow Shaping</option>
+            <option value="threading">Eyebrow Threading</option>
+          </select>
+        </label>
 
-        <label for="comments">Additional Comments:</label>
-        <textarea id="comments" name="comments" rows="4"></textarea>
+        <label>Additional Comments:</label>
+        <label>
+          <textarea name="comments" rows="4"></textarea>
+        </label>
 
         <button type="submit">Submit</button>
       </fieldset>
@@ -102,4 +101,3 @@
 </body>
 
 </html>
-
