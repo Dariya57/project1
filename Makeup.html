@@ -9,16 +9,15 @@
 
 <body>
 <header>
-  <h1>Makeup</h1>
+  <h1><strong> Beauty Salon </strong></h1>
 </header>
 
 <main>
-  <section id="makeup">
+  <section>
     <h2>Makeup Services</h2>
     <p>Our makeup services cater to every occasion, whether it's a special event or everyday wear. Explore our range of makeup options to find the perfect look for you.</p>
 
-    <!-- Service Item 1: Bridal Makeup -->
-    <div class="service-item">
+    <div>
       <h3>Bridal Makeup</h3>
       <figure>
         <img src="https://media.glamourmagazine.co.uk/photos/65a7e3cb391afd6892229e6f/4:3/w_1704,h_1278,c_limit/WEDDING-MAKEUP-170124-@allanface.jpg" alt="Description"
@@ -29,20 +28,18 @@
       <p>Our professional bridal makeup service ensures you look stunning on your special day. Long-lasting, flawless finish.</p>
     </div>
 
-
-    <div class="service-item">
+    <div>
       <h3>Party Makeup</h3>
       <figure>
         <img src="https://www.byrdie.com/thmb/zPZo1-S9lgw4ETw31FHQKMsLFNY=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/279709738_564244188323360_8669104260601931164_n-45bbaeb2f6924bcb8c55b8642a1fc88c.jpeg" alt="Party Makeup Service"
-        width="280" height="290">
+             width="280" height="290">
         <figcaption>Glamorous makeup for any party or event.</figcaption>
       </figure>
       <p>Price: 28 000₸</p>
       <p>Look your best at any event with our glamorous party makeup, tailored to match your outfit and style.</p>
     </div>
 
-
-    <div class="service-item">
+    <div>
       <h3>Natural Makeup</h3>
       <figure>
         <img src="https://www.ultimaii.com/files/5-Tips-untuk-Mendapatkan-Makeup-Natural-Flawless.jpg" alt="Natural Makeup Service"
@@ -53,8 +50,7 @@
       <p>Get a natural, everyday look with our minimal yet flawless makeup application, enhancing your natural beauty.</p>
     </div>
 
-
-    <div class="service-item">
+    <div>
       <h3>Glamorous Makeup</h3>
       <figure>
         <img src="https://www.fabmood.com/inspiration/wp-content/uploads/2024/01/glam-makeup-4278-18.jpg" alt="Glamorous Makeup Service" width="280" height="290">
@@ -64,8 +60,7 @@
       <p>Turn heads with a bold and glamorous look. Perfect for special events or photoshoots.</p>
     </div>
 
-
-    <div class="service-item">
+    <div>
       <h3>Editorial Makeup</h3>
       <figure>
         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJQ5hirI5dKfrovzMB1NbDMl9Qj9PfW29NNA&s" alt="Editorial Makeup Service" width="280" height="290">
@@ -75,11 +70,9 @@
       <p>Perfect for photoshoots or creative projects, our editorial makeup is bold, artistic, and photogenic.</p>
     </div>
 
-
     <blockquote>
       "Makeup is not a mask, but a way to enhance what is already beautiful."
     </blockquote>
-
 
     <ul>
       <li>Bridal Makeup</li>
@@ -88,7 +81,6 @@
       <li>Glamorous Makeup</li>
       <li>Editorial Makeup</li>
     </ul>
-
 
     <dl>
       <dt>Bridal Makeup</dt>
@@ -103,24 +95,29 @@
       <dd>Artistic makeup for editorial and creative purposes.</dd>
     </dl>
 
-
     <form action="submit_form.php" method="post">
       <fieldset>
         <legend>Book a Makeup Appointment</legend>
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
+        <label>Name:</label>
+        <label>
+          <input type="text" name="name" required>
+        </label>
 
-        <label for="service">Select Service:</label>
-        <select id="service" name="service">
-          <option value="bridal">Bridal Makeup</option>
-          <option value="party">Party Makeup</option>
-          <option value="natural">Natural Makeup</option>
-          <option value="glamorous">Glamorous Makeup</option>
-          <option value="editorial">Editorial Makeup</option>
-        </select>
+        <label>Select Service:</label>
+        <label>
+          <select name="service">
+            <option value="bridal">Bridal Makeup</option>
+            <option value="party">Party Makeup</option>
+            <option value="natural">Natural Makeup</option>
+            <option value="glamorous">Glamorous Makeup</option>
+            <option value="editorial">Editorial Makeup</option>
+          </select>
+        </label>
 
-        <label for="comments">Additional Comments:</label>
-        <textarea id="comments" name="comments" rows="4"></textarea>
+        <label>Additional Comments:</label>
+        <label>
+          <textarea name="comments" rows="4"></textarea>
+        </label>
 
         <button type="submit">Submit</button>
       </fieldset>
