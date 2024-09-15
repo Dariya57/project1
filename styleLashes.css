@@ -1,0 +1,82 @@
+body {
+  font-family: "Palatino Linotype";
+  background-color: snow;
+}
+.header-title {
+  text-align: center;
+  font-size: 40px;
+  margin: 25px;
+  color: deeppink;
+}
+#navigation {
+  margin-top: 15px;
+}
+.nav-link {
+  color: deeppink;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 20px;
+  margin: 10px;
+  border-radius: 15px;
+  transition: background-color 0.2s, color 0.2s;
+}
+.nav-link:hover {
+  background-color: orchid;
+  color: white;
+}
+#main{
+  padding: 10px;
+  max-width: 1350px;
+  margin: auto;
+}
+.section-title{
+  font-size: 28px;
+  color: mediumvioletred;
+  border-color: pink;
+  border-style: outset;
+  padding: 15px;
+}
+.text-description {
+  font-size: 18px;
+  color: darkmagenta;
+}
+.services-list {
+  color: darkmagenta;
+  font-size: 18px;
+}
+.text-price {
+  font-size: 18px;
+  margin: 15px;
+  color: purple;
+}
+.review-quote {
+  font-size: 18px;
+  color: crimson;
+}
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.gallery-image {
+  width: 310px;
+  height: 270px;
+  border-radius: 20px;
+}
+.gallery-caption{
+  font-size: 17px;
+  color: purple;
+  align-content: flex-end;
+}
+#footer {
+  background-color: gray;
+  color: whitesmoke;
+  text-align: center;
+  padding: 20px;
+}
+.contact-mail {
+  color: darkmagenta;
+}
+.contact-mail:hover{
+  color: white;
+}
