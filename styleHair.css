@@ -44,20 +44,6 @@ body {
   color: mediumvioletred;
   font-size: 18px;
 }
-.text-price {
-  font-size: 18px;
-  margin: 15px;
-  padding: 5px;
-  color: mediumvioletred;
-}
-.review-quote {
-  font-size: 18px;
-  color: indigo;
-  padding: 10px;
-  margin: 10px;
-  background-color: lavender;
-  border-radius: 20px;
-}
 .gallery {
   display: flex;
   flex-wrap: wrap;
@@ -71,6 +57,20 @@ body {
 .gallery-caption{
   font-size: 17px;
   color: indigo;
+}
+.text-price {
+  font-size: 18px;
+  margin: 15px;
+  padding: 5px;
+  color: mediumvioletred;
+}
+.review-quote {
+  font-size: 18px;
+  color: indigo;
+  padding: 10px;
+  margin: 10px;
+  background-color: lavender;
+  border-radius: 20px;
 }
 #footer {
   background-color: gray;

@@ -42,23 +42,6 @@ body {
   font-size: 18px;
   color: darkmagenta;
 }
-.services-list {
-  color: darkmagenta;
-  font-size: 18px;
-}
-.text-price {
-  font-size: 18px;
-  margin: 15px;
-  color: purple;
-}
-.review-quote {
-  font-size: 18px;
-  color: crimson;
-  background-color: lavenderblush;
-  border-left: 10px solid pink;
-  padding: 15px;
-  margin: 10px;
-}
 .gallery {
   display: flex;
   flex-wrap: wrap;
@@ -73,6 +56,23 @@ body {
   font-size: 17px;
   color: purple;
   align-content: flex-end;
+}
+.text-price {
+  font-size: 18px;
+  margin: 15px;
+  color: purple;
+}
+.review-quote {
+  font-size: 18px;
+  color: crimson;
+  background-color: lavenderblush;
+  border-left: 10px solid pink;
+  padding: 15px;
+  margin: 10px;
+}
+.services-list {
+  color: darkmagenta;
+  font-size: 18px;
 }
 #footer {
   background-color: gray;
