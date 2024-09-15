@@ -1,0 +1,59 @@
+body {
+  font-family: "Palatino Linotype";
+  background-color: ghostwhite;
+}
+.header-title {
+  text-align: center;
+  font-size: 40px;
+  margin: 25px;
+  color: purple;
+}
+.section-title{
+  font-size: 28px;
+  color: darkmagenta;
+  border: 2px solid rebeccapurple;
+  border-radius: 20px;
+  padding: 15px;
+}
+#main{
+  padding: 20px;
+  max-width: 1350px;
+  margin: auto;
+}
+.text-description {
+  font-size: 18px;
+  color: indigo;
+}
+.services-list {
+  color: mediumvioletred;
+  font-size: 18px;
+}
+.text-price {
+  font-size: 18px;
+  margin: 15px;
+  color: mediumvioletred;
+}
+.review-quote {
+  font-size: 18px;
+  color: indigo;
+}
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.gallery-image {
+  width: 240px;
+  height: 240px;
+  border-radius: 20px;
+}
+#footer {
+  background-color: gray;
+  color: whitesmoke;
+  text-align: center;
+  padding: 20px;
+}
+.contact-mail {
+  color: navy;
+}
+
