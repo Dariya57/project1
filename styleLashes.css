@@ -1,12 +1,14 @@
 body {
-  font-family: "Palatino Linotype";
+  font-family: Georgia;
   background-color: snow;
 }
 .header-title {
   text-align: center;
   font-size: 40px;
-  margin: 25px;
+  margin: auto;
+  padding: 25px;
   color: deeppink;
+  background-color: lavenderblush;
 }
 #navigation {
   margin-top: 15px;
