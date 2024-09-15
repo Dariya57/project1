@@ -8,17 +8,33 @@ body {
   margin: 25px;
   color: purple;
 }
+#navigation {
+  margin-top: 15px;
+}
+.nav-link {
+  color: darkorchid;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 20px;
+  margin: 10px;
+  border-radius: 15px;
+  transition: background-color 0.2s, color 0.2s;
+}
+.nav-link:hover {
+  background-color: darkslateblue;
+  color: white;
+}
+#main{
+  padding: 20px;
+  max-width: 1350px;
+  margin: auto;
+}
 .section-title{
   font-size: 28px;
   color: darkmagenta;
   border: 2px solid rebeccapurple;
   border-radius: 20px;
   padding: 15px;
-}
-#main{
-  padding: 20px;
-  max-width: 1350px;
-  margin: auto;
 }
 .text-description {
   font-size: 18px;
@@ -47,6 +63,10 @@ body {
   height: 240px;
   border-radius: 20px;
 }
+.gallery-caption{
+  font-size: 17px;
+  color: indigo;
+}
 #footer {
   background-color: gray;
   color: whitesmoke;
@@ -56,4 +76,8 @@ body {
 .contact-mail {
   color: navy;
 }
+.contact-mail:hover{
+  color: white;
+}
+
 
