@@ -5,96 +5,83 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Eyebrow Shaping Services - Beauty Salon</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-<header>
+<header class="header">
   <h1>Beauty Salon</h1>
 </header>
 
-<main>
-  <section>
+<main class="main-content">
+  <section class="section">
     <h2>Eyebrow Shaping Services</h2>
     <p>Our eyebrow shaping services are designed to give you the perfect brows to complement your face. Choose from a variety of shaping options to achieve your desired look.</p>
 
-    <div>
-      <h3>Classic Eyebrow Shaping</h3>
-      <figure>
+    <div class="service-item">
+      <figure class="images-grid">
         <img src="https://classiceyebrows.com.au/wp-content/uploads/2023/09/Book-Now-3.png" alt="Classic Eyebrow Shaping" width="280" height="290">
-        <figcaption>Perfectly shaped eyebrows for a classic look.</figcaption>
-      </figure>
-      <p>Price: 7 000₸</p>
-      <p>Our classic eyebrow shaping service gives you well-defined brows with a natural look. Ideal for everyday wear.</p>
-    </div>
-
-    <div>
-      <h3>High-Definition Eyebrow Shaping</h3>
-      <figure>
         <img src="https://hdbrows.com/media/amasty/blog/high-definition-brows.jpeg" alt="High-Definition Eyebrow Shaping" width="280" height="290">
-        <figcaption>High-definition shaping for a bold and defined look.</figcaption>
+        <img src="https://www.eyeadorethreading.com/wp-content/uploads/2023/12/image-16-1024x585.webp" alt="Eyebrow Threading" width="280" height="290">
+        <img src="https://images.squarespace-cdn.com/content/v1/5b766e7071069965e74b1fff/1597670348878-NMA590KOEEURCKUYDJ6O/IMG_5892.jpeg" alt="Eyebrow lamination" width="280" height="290">
+      <p>Price: 12 000₸ - 27 000₸</p>
       </figure>
-      <p>Price: 8 000₸</p>
-      <p>Get a sharp, defined look with our high-definition eyebrow shaping, perfect for special occasions or a standout daily look.</p>
     </div>
 
-    <div>
-      <h3>Eyebrow Threading</h3>
-      <figure>
-        <img src="https://www.eyeadorethreading.com/wp-content/uploads/2023/12/image-16-1024x585.webp" alt="Eyebrow Threading" width="280" height="290">
-        <figcaption>Eyebrow threading for a precise and clean finish.</figcaption>
-      </figure>
-      <p>Price: 8 000₸</p>
-      <p>Experience the precision of eyebrow threading, which offers a clean and defined look while minimizing discomfort.</p>
-    </div>
+      <p>Get a sharp, defined look with our high-definition eyebrow shaping, perfect for special occasions or a standout daily look.</p>
 
     <blockquote>
       "Well-shaped eyebrows frame the face and enhance your natural beauty."
     </blockquote>
 
-    <ul>
+    <ul class = "lists">
       <li>Classic Eyebrow Shaping</li>
       <li>High-Definition Eyebrow Shaping</li>
       <li>Eyebrow Threading</li>
+      <li>Eyebrow Lamination</li>
     </ul>
 
-    <dl>
+    <dl class="definition-list">
       <dt>Classic Eyebrow Shaping</dt>
       <dd>Traditional shaping for a natural and everyday look.</dd>
       <dt>High-Definition Eyebrow Shaping</dt>
       <dd>Bold shaping for a sharp, defined look.</dd>
       <dt>Eyebrow Threading</dt>
       <dd>Precise threading technique for a clean finish.</dd>
+      <dt>Eyebrow Lamination</dt>
+      <dd> It helps achieve a smooth, sleek brow shape for up to 6 weeks, giving you a naturally polished appearance.</dd>
     </dl>
 
     <form action="submit_form.php" method="post">
-      <fieldset>
-        <legend>Book an Eyebrow Shaping Appointment</legend>
-        <label>Name:</label>
-        <label>
+      <fieldset class="form-fieldset">
+        <legend class ="form-legend">Book an Eyebrow Shaping Appointment</legend>
+        <label class = "form-label">Name:</label>
+          <label class = "form-label">
           <input type="text" name="name" required>
         </label>
 
-        <label>Select Service:</label>
-        <label>
-          <select name="service">
+        <label class = "form-label">Select Service:</label>
+        <label class = "form-label">
+          <select name="service" class = "form-select">
             <option value="classic">Classic Eyebrow Shaping</option>
             <option value="hd">High-Definition Eyebrow Shaping</option>
             <option value="threading">Eyebrow Threading</option>
+            <option value="lamination">Eyebrow lamination</option>
           </select>
         </label>
 
-        <label>Additional Comments:</label>
-        <label>
-          <textarea name="comments" rows="4"></textarea>
+        <label class = "form-label">Additional Comments:</label>
+        <label class = "form-label">
+          <textarea name="comments" rows="4" class="form-textarea"></textarea>
         </label>
 
-        <button type="submit">Submit</button>
+        <button type="submit" class="form-button">Submit</button>
       </fieldset>
     </form>
   </section>
 </main>
 
-<footer>
+<footer class="footer">
   <p>© 2024 Beauty Salon. All rights reserved.</p>
   <p>Contact us: <a href="mailto:zhadylbekova@gmail.com">zhadylbekova@gmail.com</a></p>
 </footer>
