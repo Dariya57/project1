@@ -1,88 +1,65 @@
 body {
   font-family: Georgia;
-  background-color: snow;
+  background-color: #FFF0F5;
 }
+
 .header-title {
-  text-align: center;
-  font-size: 40px;
-  margin: auto;
+  color: #FF1493;
+  background-color: #FFE4E1;
   padding: 25px;
-  color: deeppink;
-  background-color: lavenderblush;
 }
-#navigation {
-  margin-top: 15px;
-}
+
 .nav-link {
-  color: deeppink;
-  text-decoration: none;
+  color: #FF69B4;
   font-weight: bold;
-  padding: 10px 20px;
-  margin: 10px;
-  border-radius: 15px;
   transition: background-color 0.2s, color 0.2s;
 }
+
 .nav-link:hover {
-  background-color: orchid;
+  background-color: #DB7093;
   color: white;
 }
-#main{
-  padding: 10px;
-  max-width: 1350px;
-  margin: auto;
-}
-.section-title{
-  font-size: 28px;
-  color: mediumvioletred;
-  border-color: pink;
-  border-style: outset;
+
+.section-title {
+  color: #C71585;
   padding: 15px;
+  border-bottom: 2px solid #FFB6C1;
 }
-.text-description {
-  font-size: 18px;
-  color: darkmagenta;
+
+.text-description,
+.text-price,
+.services-list {
+  color: #FF69B4;
 }
-.gallery {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
+
 .gallery-image {
-  width: 310px;
-  height: 270px;
-  border-radius: 20px;
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
 }
-.gallery-caption{
-  font-size: 17px;
-  color: purple;
-  align-content: flex-end;
+
+.gallery-caption {
+  color: #DA70D6;
 }
-.text-price {
-  font-size: 18px;
-  margin: 15px;
-  color: purple;
-}
+
 .review-quote {
-  font-size: 18px;
-  color: crimson;
-  background-color: lavenderblush;
-  border-left: 10px solid pink;
+  color: #FF1493;
+  background-color: #FFF0F5;
+  border-left: 10px solid #FFC0CB;
   padding: 15px;
   margin: 10px;
 }
-.services-list {
-  color: darkmagenta;
-  font-size: 18px;
-}
+
 #footer {
-  background-color: gray;
-  color: whitesmoke;
-  text-align: center;
+  background-color: #C71585;
+  color: white;
   padding: 20px;
 }
+
 .contact-mail {
-  color: darkmagenta;
+  color: #FF69B4;
 }
-.contact-mail:hover{
+
+.contact-mail:hover {
   color: white;
 }

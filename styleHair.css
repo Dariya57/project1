@@ -1,88 +1,11 @@
-body {
-  font-family: "Palatino Linotype";
-  background-color: ghostwhite;
+.bg-violet {
+  background-color: #6a0dad;
 }
-.header-title {
-  text-align: center;
-  font-size: 40px;
-  margin: 25px;
-  color: purple;
+.text-violet {
+  color: #8a2be2
 }
-#navigation {
-  margin-top: 15px;
+.text-light-violet {
+  color: #dda0dd;
 }
-.nav-link {
-  color: darkorchid;
-  text-decoration: none;
-  font-weight: bold;
-  padding: 10px 20px;
-  margin: 10px;
-  border-radius: 15px;
-  transition: background-color 0.2s, color 0.2s;
-}
-.nav-link:hover {
-  background-color: darkslateblue;
-  color: white;
-}
-#main{
-  padding: 20px;
-  max-width: 1350px;
-  margin: auto;
-}
-.section-title{
-  font-size: 28px;
-  color: darkmagenta;
-  border: 2px solid rebeccapurple;
-  border-radius: 20px;
-  padding: 15px;
-}
-.text-description {
-  font-size: 18px;
-  color: indigo;
-}
-.services-list {
-  color: mediumvioletred;
-  font-size: 18px;
-}
-.gallery {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-.gallery-image {
-  width: 240px;
-  height: 240px;
-  border-radius: 20px;
-}
-.gallery-caption{
-  font-size: 17px;
-  color: indigo;
-}
-.text-price {
-  font-size: 18px;
-  margin: 15px;
-  padding: 5px;
-  color: mediumvioletred;
-}
-.review-quote {
-  font-size: 18px;
-  color: indigo;
-  padding: 10px;
-  margin: 10px;
-  background-color: lavender;
-  border-radius: 20px;
-}
-#footer {
-  background-color: gray;
-  color: whitesmoke;
-  text-align: center;
-  padding: 20px;
-}
-.contact-mail {
-  color: navy;
-}
-.contact-mail:hover{
-  color: white;
-}
-
-
+.rounded-custom {
+  border-radius: 15px;}
