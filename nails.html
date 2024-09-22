@@ -3,54 +3,126 @@
 <head>
   <meta charset="UTF-8">
   <title>Nails</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style1.css">
 </head>
 <body>
-<header class="header-section">
-  <h1>Beauty Salon: Nail services</h1>
-</header>
-
-<main>
-  <section>
-
-    <h2>Our Nail Treatments:</h2>
-    <h3><p>We offer a variety of nail services to keep your nails looking fabulous.</p></h3>
-    <div  class="container">
-    <dl id="pricelist">
-      <dt>Manicures</dt>
-      <dd>Price: 4000 tg</dd>
-      <dt>Nail extensions</dt>
-      <dd>Price: 10000 tg</dd>
-      <dt>Pedicures</dt>
-      <dd>Price: 5000 tg</dd>
-      <dt>Nail Art</dt>
-      <dd>Price: 2000 tg</dd>
-      <dt>Gel Nails</dt>
-      <dd>Price: 7000 tg</dd>
-      <dt>Nail design</dt>
-      <dd>Price: 3000 tg</dd>
-    </dl>
+<header class="header-section bg-light py-3">
+  <div class="container">
+    <nav id="navbar" class="navbar navbar-expand-lg navbar-light">
+      <div class="container-fluid">
+        <a class="navbar-brand text-purple" href="#">Beauty Salon</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link text-purple" href="nails.html">Nails</a></li>
+            <li class="nav-item"><a class="nav-link text-purple" href="Hair.html">Hair</a></li>
+            <li class="nav-item"><a class="nav-link text-purple" href="Eyebrow.html">Eyebrows</a></li>
+            <li class="nav-item"><a class="nav-link text-purple" href="lashes.html">Lashes</a></li>
+            <li class="nav-item"><a class="nav-link text-purple" href="Makeup.html">Makeup</a></li>
+            <li class="nav-item"><a class="nav-link text-purple" href="#contacts">Contacts</a></li>
+          </ul>
+        </div>
       </div>
-
+    </nav>
+  </div>
+</header>
+<main class="container my-5">
+  <section class="layout-section mb-5">
+    <h3><p class="text-purple">We offer a variety of nail services to keep your nails looking fabulous.</p></h3>
   </section>
-
+  <section class="bg-cover" style="background-image: url('https://i.pinimg.com/originals/fc/a4/4b/fca44bcd6696ce79ea4ec264f26ad401.jpg');">
+    <div class="bg-opacity-50 text-white p-5">
+      <h2>Experience the best beauty treatments in town</h2>
+    </div>
+  </section>
+  <section class="my-5">
+    <h2 class="text-purple">Service Pricing</h2>
+    <table class="table table-striped table-hover table-sm table-responsive">
+      <thead class="thead-dark position-sticky top-0">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Service</th>
+        <th scope="col">Price</th>
+        <th scope="col">Duration</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Manicure</td>
+        <td>4000 tg</td>
+        <td>30 mins</td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>Nail Extensions</td>
+        <td>10000 tg</td>
+        <td>1 hour</td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td>Pedicure</td>
+        <td>5000 tg</td>
+        <td>45 mins</td>
+      </tr>
+      <tr>
+        <th scope="row">4</th>
+        <td>Nail Art</td>
+        <td>2000 tg</td>
+        <td>30 mins</td>
+      </tr>
+      <tr>
+        <th scope="row">5</th>
+        <td>Gel Nails</td>
+        <td>7000 tg</td>
+        <td>1 hour</td>
+      </tr>
+      <tr>
+        <th scope="row">6</th>
+        <td>Nail Design</td>
+        <td>3000 tg</td>
+        <td>45 mins</td>
+      </tr>
+      </tbody>
+    </table>
+  </section>
   <section>
-    <h2>Gallery</h2>
+    <h2 class="text-purple">Gallery</h2>
     <figure>
-      <img class="imgstyle" src="https://i.pinimg.com/originals/22/14/bf/2214bf7fc982e15017ada229068375b5.jpg" alt="1">
-      <img class="imgstyle" src="https://i.pinimg.com/736x/a9/f4/d8/a9f4d88a857eeb278261bb27dea85a38.jpg" alt="2" >
-      <img class="imgstyle" src="https://i.pinimg.com/736x/35/35/e6/3535e6f4b236aff4313b8a2a1ffa4f30.jpg" alt="3" >
-      <img class="imgstyle" src="https://i.pinimg.com/736x/9f/02/31/9f0231d9afbbd7eb61e3e9a93817110a.jpg" alt="4" >
-      <img class="imgstyle" src="https://i.pinimg.com/originals/44/29/15/44291590b38b1f99839a680af83dbcb2.jpg" alt="5">
-      <figcaption id="figstyle" >Works of our masters</figcaption>
+      <img class="imgstyle" src="https://i.pinimg.com/originals/22/14/bf/2214bf7fc982e15017ada229068375b5.jpg" alt="Nail Art 1" style="width: 18%; height: 200px; margin: 10px 0;">
+      <img class="imgstyle" src="https://i.pinimg.com/736x/a9/f4/d8/a9f4d88a857eeb278261bb27dea85a38.jpg" alt="Nail Art 2" style="width: 18%; height: 200px; margin: 10px 0;">
+      <img class="imgstyle" src="https://i.pinimg.com/736x/35/35/e6/3535e6f4b236aff4313b8a2a1ffa4f30.jpg" alt="Nail Art 3" style="width: 18%; height: 200px; margin: 10px 0;">
+      <img class="imgstyle" src="https://i.pinimg.com/736x/9f/02/31/9f0231d9afbbd7eb61e3e9a93817110a.jpg" alt="Nail Art 4" style="width: 18%; height: 200px; margin: 10px 0;">
+      <img class="imgstyle" src="https://i.pinimg.com/originals/44/29/15/44291590b38b1f99839a680af83dbcb2.jpg" alt="Nail Art 5" style="width: 18%; height: 200px; margin: 10px 0;">
     </figure>
   </section>
-
 </main>
-
-<footer>
-  <p>Zhanel Adylbekova / Dariya Oktash / Marzhan Yakhiyayeva</p>
-  <p>Contact us: <a href="mailto:zhadylbekova@gmail.com">zhadylbekova@gmail.com</a></p>
+<blockquote class="blockquote text-center my-5 text-purple">
+  "Beauty is power; a smile is its sword." - John Ray
+</blockquote>
+<footer id="contacts" class="bg-dark text-white py-4">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <h5>Contact Us</h5>
+        <p>Email: <a href="mailto:zhadylbekova@gmail.com" class="text-white">zhadylbekova@gmail.com</a></p>
+        <p>Phone: +7 778 598 70 70</p>
+      </div>
+      <div class="col-md-6">
+        <h5>Quick Links</h5>
+        <ul class="list-unstyled">
+          <li><a href="nails.html" class="text-white">Nails</a></li>
+          <li><a href="Hair.html" class="text-white">Hair</a></li>
+          <li><a href="Eyebrow.html" class="text-white">Eyebrows</a></li>
+          <li><a href="lashes.html" class="text-white">Lashes</a></li>
+          <li><a href="Makeup.html" class="text-white">Makeup</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
 </footer>
 </body>
 </html>

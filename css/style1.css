@@ -1,95 +1,16 @@
-body {
-  font-family: 'Arial', sans-serif;
-  line-height: 1.6;
-  margin: 0;
-  padding: 0;
-  background-color: white;
+.text-purple {
+  color: purple;
 }
 
-body {
-  font-family: 'Arial', sans-serif;
-  line-height: 1.6;
-}
-h1 {
-  text-align: center;
-  color:  floralwhite;
-}
-h2, h3 {
-    color: #5c2843;
-  }
-  .header-section {
-    background-color: #5c2843;
-    padding: 20px;
-    text-align: center;
-    border-bottom: 1px solid #ddd;
-  }
-  footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #5c2843;
-    color: #f2f2f2;
-  }
-
-  footer a {
-    color: #f2f2f2;
-    text-decoration: none;
-  }
-
-  footer a:hover {
-    text-decoration: underline;
-  }
-
-  #pricelist {
-    font-size:16px;
-    text-align: left;
-    padding: 20px;
-    margin: 20px 0;
-    border: 10px;
-    border: #5c2843;
-
-  }
-#pricelist {
-  margin: 20px 0;
-  margin-left:75px;
+.bg-opacity-50 {
+  background-color: rgba(0, 0, 0, 0.35);
 }
 
-#pricelist dt {
-  font-weight: bold;
-  margin-top: 10px;
+.bg-cover {
+  background-size: cover;
+  background-position: center;
 }
 
-#pricelist dd {
-  margin-left: 20px;
-}
-
-.container {
-  width: 20%;
-  align-self: center;
-  text-align: center;
-  margin-left:650px;
-  background-color: #fff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  display: flex;
-  flex-wrap: wrap;
-}
-  section {
-    margin: 20px 0;
-    padding: 20px;
-    border: 1px solid #ddd;
-    background-color: floralwhite;
-    text-align: center;
-    color: #5c2843;
-  }
-  .imgstyle {
-    width:280px;
-    height:290px;
-  }
-
-  #figstyle {
-    text-align:center;
-    color: purple;
-    font-style: italic;
-  }
-
-
-
+.imgstyle {
+  width: 100%;
+  height: auto;}
