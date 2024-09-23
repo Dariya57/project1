@@ -1,54 +1,136 @@
- <!DOCTYPE html>
-  <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Beauty salon</title>
-    <link rel="stylesheet" href="/css/style.css">
-  </head>
-  <header class="header-section">
-    <h1>Beauty Salon</h1>
-    <nav id="navbar">
-      <a href="nails.html">Nails</a>
-      <a href="Hair.html">Hair</a>
-      <a href="Eyebrow.html">Eyebrows</a>
-      <a href="lashes.html">Lashes</a>
-      <a href="Makeup.html">Makeup</a>
-      <a href="#contacts">Contacts</a>
-    </nav>
-  </header>
-  <main>
-      <section class="layout-section">
-      <h2>Welcome to Our Beauty Salon</h2>
-      <p class="highlighted-text">Experience the best beauty treatments in town.</p>
-       <figure><img id="image-styling" src="https://avatars.mds.yandex.net/get-altay/1666174/2a0000016b40784f0974d99c67fcf943655e/orig" alt="Beauty Salon">
-      <figcaption> Our beautiful salon </figcaption>
-      </figure>
-      </section>
+<!DOCTYPE html>
+<html lang="en">
 
-    <section>
-        <h2>Our Services</h2>
-        <ul>
-          <li>Haircuts</li>
-          <li>Hair Coloring</li>
-          <li>Hair Styling</li>
-          <li>Manicure</li>
-          <li>Pedicure</li>
-          <li>Makeup</li>
-          <li>Eyebrow Shaping</li>
-          <li>Eyebrow Tinting</li>
-          <li>Eyelash Extensions</li>
-          <li>Lash Lifts</li>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Beauty Salon</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+<header class="bg-light py-4 text-center">
+  <h1 class="display-4">Beauty Salon</h1>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="nails.html">Nails</a></li>
+          <li class="nav-item"><a class="nav-link" href="Hair.html">Hair</a></li>
+          <li class="nav-item"><a class="nav-link" href="Eyebrow.html">Eyebrows</a></li>
+          <li class="nav-item"><a class="nav-link" href="lashes.html">Lashes</a></li>
+          <li class="nav-item"><a class="nav-link" href="Makeup.html">Makeup</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contacts">Contacts</a></li>
         </ul>
-    </section>
-  </main>
-  <blockquote>
-    "Beauty is power; a smile is its sword." - John Ray
-  </blockquote>
-  <footer id="contacts">
-    <p> Dariya Oktash, Zhanel Adylbekova, Marzhan Yakhiyayeva</p>
-    <p>Contact us: <a href="mailto:zhadylbekova@gmail.com">zhadylbekova@gmail.com</a><br>
-    +7 778 598 70 70</p>
-  </footer>
-  </body>
-  </html>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<section class="text-center p-5 bg-cover" style="background-image: url('https://avatars.mds.yandex.net/i?id=7a920971cac2c2d57c0b0f41f9cecfb5_l-8534972-images-thumbs&ref=rim&n=13&w=850&h=315'); background-attachment: fixed; background-size: cover;">
+  <div class="bg-opacity-50 bg-dark text-white p-5">
+    <h2>Welcome to Our Beauty Salon</h2>
+    <p class="lead">Experience the best beauty treatments in town.</p>
+  </div>
+</section>
+
+<section class="container my-5">
+  <div class="row">
+    <div class="col-lg-8">
+      <h2>Our Services</h2>
+      <ul class="list-group">
+        <li class="list-group-item">Haircuts</li>
+        <li class="list-group-item">Hair Coloring</li>
+        <li class="list-group-item">Hair Styling</li>
+        <li class="list-group-item">Manicure</li>
+        <li class="list-group-item">Pedicure</li>
+        <li class="list-group-item">Makeup</li>
+        <li class="list-group-item">Eyebrow Shaping</li>
+        <li class="list-group-item">Eyebrow Tinting</li>
+        <li class="list-group-item">Eyelash Extensions</li>
+        <li class="list-group-item">Lash Lifts</li>
+      </ul>
+    </div>
+    <div class="col-lg-4">
+      <img src="https://avatars.mds.yandex.net/get-altay/1666174/2a0000016b40784f0974d99c67fcf943655e/orig" class="img-fluid rounded" alt="Beauty Salon">
+      <figcaption class="mt-2 text-center">Our beautiful salon</figcaption>
+    </div>
+  </div>
+</section>
+
+<section class="container my-5">
+  <h2>Pricing Table</h2>
+  <div class="table-responsive">
+    <table class="table table-striped table-hover table-sm">
+      <thead class="thead-dark position-sticky top-0 bg-dark text-white">
+      <tr>
+        <th>Service</th>
+        <th>Price</th>
+        <th>Duration</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>Haircuts</td>
+        <td>$50</td>
+        <td>45 mins</td>
+      </tr>
+      <tr>
+        <td>Manicure</td>
+        <td>$30</td>
+        <td>30 mins</td>
+      </tr>
+      <tr>
+        <td>Pedicure</td>
+        <td>$40</td>
+        <td>40 mins</td>
+      </tr>
+      <tr>
+        <td>Makeup</td>
+        <td>$75</td>
+        <td>60 mins</td>
+      </tr>
+      <tr>
+        <td>Eyelash Extensions</td>
+        <td>$100</td>
+        <td>90 mins</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<blockquote class="blockquote text-center my-5">
+  <p class="mb-0">"Beauty is power; a smile is its sword." - John Ray</p>
+</blockquote>
+
+<footer class="bg-dark text-white py-5" id="contacts">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4">
+        <h5>Contact Us</h5>
+        <p>Dariya Oktash, Zhanel Adylbekova, Marzhan Yakhiyayeva</p>
+        <p>Email: <a href="mailto:zhadylbekova@gmail.com" class="text-white">zhadylbekova@gmail.com</a><br>Phone: +7 778 598 70 70</p>
+      </div>
+      <div class="col-lg-4">
+        <h5>Social Media</h5>
+        <ul class="list-unstyled">
+          <li><a href='https://www.instagram.com/ainalayyn_?igsh=MThvNDFyM2NhejNjNg%3D%3D&utm_source=qr' class="text-white">Instagram</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-4">
+        <h5>Opening Hours</h5>
+        <ul class="list-unstyled">
+          <li>Mon-Fri: 9 AM - 7 PM</li>
+          <li>Sat-Sun: 10 AM - 6 PM</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
