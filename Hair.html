@@ -9,31 +9,26 @@
 
 </head>
 <body>
-<header class="bg-light py-3">
-  <div class="container">
-    <h1 class="text-center text-primary">Beauty Salon: Hair Services</h1>
-    <nav class="navbar navbar-expand-lg navbar-light">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="index.html">Main Page</a>
-        <div class="navbar-collapse">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" href="nails.html">Nails</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="Eyebrow.html">Eyebrows</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="Lashes.html">Lashes</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="Makeup.html">Makeup</a>
-            </li>
-          </ul>
-        </div>
+<header class="bg-light py-4 text-center">
+  <h1 class="display-4">Beauty Salon</h1>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="nails.html">Nails</a></li>
+          <li class="nav-item"><a class="nav-link" href="Hair.html">Hair</a></li>
+          <li class="nav-item"><a class="nav-link" href="Eyebrow.html">Eyebrows</a></li>
+          <li class="nav-item"><a class="nav-link" href="lashes.html">Lashes</a></li>
+          <li class="nav-item"><a class="nav-link" href="Makeup.html">Makeup</a></li>
+        </ul>
       </div>
-    </nav>
-  </div>
+    </div>
+  </nav>
 </header>
 
 <main class="container mt-4">
@@ -97,13 +92,63 @@
     <blockquote class="blockquote text-center">
       <p>"I really liked the hairstyle that was done to me! I'm thrilled!!!"</p>
     </blockquote>
+    <form action="submit_form.php" method="post" class="mt-5">
+      <fieldset class="border p-4 rounded">
+        <legend class="form-legend mb-4 text-center">Book a Makeup Appointment</legend>
+
+        <div class="mb-3">
+          <label for="name" class="form-label">Name:</label>
+          <input type="text" id="name" name="name" class="form-control" required>
+        </div>
+
+        <div class="mb-3">
+          <label for="service" class="form-label">Select Service:</label>
+          <select id="service" name="service" class="form-select">
+            <option value="bridal">Bridal Makeup</option>
+            <option value="party">Party Makeup</option>
+            <option value="natural">Natural Makeup</option>
+            <option value="glamorous">Glamorous Makeup</option>
+            <option value="editorial">Editorial Makeup</option>
+          </select>
+        </div>
+
+        <div class="mb-3">
+          <label for="comments" class="form-label">Additional Comments:</label>
+          <textarea id="comments" name="comments" rows="4" class="form-control"></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </fieldset>
+    </form>
   </section>
 </main>
 
-<footer class="bg-dark text-white text-center py-3">
-  <p>Zhanel Adylbekova / Dariya Oktash / Marzhan Yakhiyayeva</p>
-  <p>Contact us: <a href="mailto:zhadylbekova@gmail.com" class="text-white">zhadylbekova@gmail.com</a></p>
-  <p>Date: September, 2024</p>
+<footer class="bg-dark text-white py-5" id="contacts">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4">
+        <h5>Contact Us</h5>
+        <p>Email: <a href="mailto:zhadylbekova@gmail.com" class="text-white">zhadylbekova@gmail.com</a><br>Phone: +7 778 598 70 70</p>
+        <p>D.Oktash, Z.Adylbekova, M.Yakhiyayeva</p>
+      </div>
+
+      <div class="col-lg-4">
+        <h5>Social Media</h5>
+        <ul class="list-unstyled">
+          <li><a href='https://www.instagram.com/ainalayyn_?igsh=MThvNDFyM2NhejNjNg%3D%3D&utm_source=qr' class="text-white">Instagram</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-4">
+        <h5>Opening Hours</h5>
+        <ul class="list-unstyled">
+          <li>Mon-Fri: 9 AM - 7 PM</li>
+          <li>Sat-Sun: 10 AM - 6 PM</li>
+        </ul>
+      </div>
+    </div>
+
+
+  </div>
 </footer>
 </body>
 </html>
