@@ -1,65 +1,8 @@
-body {
-  font-family: Georgia;
-  background-color: #FFF0F5;
-}
-
-.header-title {
-  color: #FF1493;
-  background-color: #FFE4E1;
-  padding: 25px;
-}
-
-.nav-link {
-  color: #FF69B4;
-  font-weight: bold;
-  transition: background-color 0.2s, color 0.2s;
-}
-
-.nav-link:hover {
-  background-color: #DB7093;
+.custom-section {
+  background-color: #800000;
   color: white;
+  padding: 30px;
 }
-
-.section-title {
-  color: #C71585;
-  padding: 15px;
-  border-bottom: 2px solid #FFB6C1;
-}
-
-.text-description,
-.text-price,
-.services-list {
-  color: #FF69B4;
-}
-
-.gallery-image {
-  width: 100%;
-  height: auto;
-  border-radius: 15px;
-}
-
-.gallery-caption {
-  color: #DA70D6;
-}
-
-.review-quote {
-  color: #FF1493;
-  background-color: #FFF0F5;
-  border-left: 10px solid #FFC0CB;
-  padding: 15px;
-  margin: 10px;
-}
-
-#footer {
-  background-color: #C71585;
-  color: white;
-  padding: 20px;
-}
-
-.contact-mail {
-  color: #FF69B4;
-}
-
-.contact-mail:hover {
-  color: white;
+.custom-section-opacity {
+  opacity: 0.85;
 }
