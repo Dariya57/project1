@@ -1,11 +1,5 @@
-.bg-violet {
-  background-color: #6a0dad;
+.card img {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
 }
-.text-violet {
-  color: #8a2be2
-}
-.text-light-violet {
-  color: #dda0dd;
-}
-.rounded-custom {
-  border-radius: 15px;}

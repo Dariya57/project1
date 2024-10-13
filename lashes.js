@@ -5,7 +5,7 @@ document.getElementById('submit-btn').addEventListener('click', function(event) 
 });
 
 document.getElementById('review-btn').addEventListener('click', function() {
-  const review = prompt('Please leave your review:');
+  var review = prompt('Please leave your review:');
   if (review) {
     alert('Thank you for your review!');
   } else {

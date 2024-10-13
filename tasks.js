@@ -1,37 +1,3 @@
-var num1 = prompt("Enter the first number:");
-var num2 = prompt("Enter the second number:");
-var operation = prompt("Enter an operation (+, -, *, /):");
-num1 = Number(num1);
-num2 = Number(num2);
-var result;
-if (operation === "+") {
-  result = num1 + num2;
-} else if (operation === "-") {
-  result = num1 - num2;
-} else if (operation === "*") {
-  result = num1 * num2;
-} else if (operation === "/") {
-  if (num2 === 0) {
-    alert("Error: Division by zero!");
-  } else {
-    result = num1 / num2;
-  }
-} else {
-  alert("Error: Invalid operation!");
-}
-if (result !== undefined) {
-  alert("Result: " + result);
-}
-
-
-
-
-
-
-
-
-
-
 var firstName = prompt("Enter your first name:");
 var lastName = prompt("Enter your last name:");
 var birthDate = prompt("Enter your age:");
@@ -140,3 +106,27 @@ fruits.unshift(newFruit);
 alert("Updated fruit list: " + fruits);
 
 
+var num1 = prompt("Enter the first number:");
+var num2 = prompt("Enter the second number:");
+var operation = prompt("Enter an operation (+, -, *, /):");
+num1 = Number(num1);
+num2 = Number(num2);
+var result;
+if (operation === "+") {
+  result = num1 + num2;
+} else if (operation === "-") {
+  result = num1 - num2;
+} else if (operation === "*") {
+  result = num1 * num2;
+} else if (operation === "/") {
+  if (num2 === 0) {
+    alert("Error: Division by zero!");
+  } else {
+    result = num1 / num2;
+  }
+} else {
+  alert("Error: Invalid operation!");
+}
+if (result !== undefined) {
+  alert("Result: " + result);
+}
