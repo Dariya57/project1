@@ -58,6 +58,8 @@
           <li class="nav-item"><a class="nav-link" href="Eyebrow.html">Eyebrows</a></li>
           <li class="nav-item"><a class="nav-link" href="lashes.html">Lashes</a></li>
           <li class="nav-item"><a class="nav-link" href="Makeup.html">Makeup</a></li>
+          <li class="nav-item"><a class="nav-link" href="GlamBag.html">Glam Bag</a></li>
+
         </ul>
       </div>
     </div>
@@ -195,24 +197,24 @@
   }
 
 
-    function validateRegistrationForm() {
-      const name = document.getElementById("name").value;
-      const email = document.getElementById("email").value;
-      const phone = document.getElementById("phone").value;
+  function validateRegistrationForm() {
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const phone = document.getElementById("phone").value;
 
 
 
-      alert(`Thank you for registering, ${name}!`);
+    alert(`Thank you for registering, ${name}!`);
+    closeRegistrationModal();
+    return false;
+  }
+
+  window.onclick = function(event) {
+    const modal = document.getElementById("registrationModal");
+    if (event.target === modal) {
       closeRegistrationModal();
-      return false;
     }
-
-    window.onclick = function(event) {
-      const modal = document.getElementById("registrationModal");
-      if (event.target === modal) {
-        closeRegistrationModal();
-      }
-    }
+  }
 </script>
 </body>
 </html>

@@ -32,6 +32,7 @@
           <li class="nav-item"><a class="nav-link" href="Eyebrow.html">Eyebrows</a></li>
           <li class="nav-item"><a class="nav-link" href="lashes.html">Lashes</a></li>
           <li class="nav-item"><a class="nav-link" href="Makeup.html">Makeup</a></li>
+
         </ul>
       </div>
     </div>
@@ -145,21 +146,17 @@
         <script src="styleB.js"></script>
         <script>
           document.querySelector('button[type="submit"]').addEventListener('click', function(event) {
-            event.preventDefault(); // Prevent form submission to allow for alert display
+            event.preventDefault();
 
-            // Get the input values
             const name = document.getElementById('name').value;
             const service = document.getElementById('service').value;
             const comments = document.getElementById('comments').value || "No additional comments";
 
-            // Display a confirmation alert with the entered information
             alert(`Thank you, ${name}!\n\nYou selected the "${service}" service.\n\nAdditional Comments: ${comments}`);
 
-            // Optionally, confirm if the user is ready to proceed
             const confirmProceed = confirm("Do you want to submit this information?");
             if (confirmProceed) {
               alert("Your request has been submitted successfully!");
-              // You can add form submission logic here if needed
             } else {
               alert("Submission cancelled.");
             }
@@ -196,7 +193,6 @@
   </div>
 </footer>
 <script src="serviceCard.js"></script>
-<script src="app1.js"></script>
 
 </body>
 </html>
