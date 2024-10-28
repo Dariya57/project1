@@ -50,36 +50,42 @@
     <div class="col-md-3 col-sm-6 mb-3">
       <div class="service-item">
       <img src="https://media.glamourmagazine.co.uk/photos/65a7e3cb391afd6892229e6f/4:3/w_1704,h_1278,c_limit/WEDDING-MAKEUP-170124-@allanface.jpg" class="img-fluid fixed-size" alt="Bridal Makeup">
-      <button onclick="addToCard('Bridal Makeup', 50000)"> Bridal Makeup - 50000₸</button>
+      <button onclick="addToBasket('Bridal Makeup', 50000)"> Bridal Makeup - 50000₸</button>
     </div>
     </div>
     <div class="col-md-3 col-sm-6 mb-3">
       <div class="service-item">
       <img src="https://www.byrdie.com/thmb/zPZo1-S9lgw4ETw31FHQKMsLFNY=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/279709738_564244188323360_8669104260601931164_n-45bbaeb2f6924bcb8c55b8642a1fc88c.jpeg" class="img-fluid fixed-size" alt="Party Makeup">
-      <button onclick="addToCard('Party Makeup', 23000)"> Party Makeup - 23000₸</button>
+      <button onclick="addToBasket('Party Makeup', 23000)"> Party Makeup - 23000₸</button>
     </div>
     </div>
     <div class="col-md-3 col-sm-6 mb-3">
       <div class="service-item">
       <img src="https://i.pinimg.com/1200x/ac/a8/25/aca82525e946c763db366acf514f64ee.jpg" class="img-fluid fixed-size" alt="Natural Makeup">
-      <button onclick="addToCard('Natural Makeup', 15000)">Natural Makeup - 15000₸</button>
+      <button onclick="addToBasket('Natural Makeup', 15000)">Natural Makeup - 15000₸</button>
     </div>
     </div>
     <div class="col-md-3 col-sm-6 mb-3">
       <div class="service-item">
       <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJQ5hirI5dKfrovzMB1NbDMl9Qj9PfW29NNA&s" class="img-fluid fixed-size" alt="Editorial Makeup">
-      <button onclick="addToCard('Editorial Makeup', 15000)"> Editorial Makeup - 15000₸</button>
+      <button onclick="addToBasket('Editorial Makeup', 15000)"> Editorial Makeup - 15000₸</button>
     </div>
     </div>
   </div>
 </div>
 
+
 <main class="main-content container mt-5">
   <div id="service-card" class="service-card">
-    <h2>My Procedures</h2>
+    <h2>
+      <img src="https://files.oaiusercontent.com/file-J6jzGJv4qPh9ytcCtu0PFXza?se=2024-10-28T08%3A41%3A43Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3D096e8cb6-a517-4341-87ee-4364e73daac6.webp&sig=wLVaZXFQHIx490deHZH/7dypCDm95QJwg25Q2YKrTwg%3D" alt="Glam Bag Icon" style="width: 40px; height: 40px; vertical-align: middle; margin-right: 10px;">
+      Glam Bag
+    </h2>
     <div id="basket"></div>
     <p id="total-price">Total Price: 0₸</p>
   </div>
+</main>
+
 
   <section class="section">
     <h2 class="text-center">Makeup Services</h2>
@@ -134,12 +140,36 @@
           <textarea id="comments" name="comments" rows="4" class="form-control"></textarea>
         </div>
 
+
         <button type="submit" class="btn btn-primary">Submit</button>
         <script src="styleB.js"></script>
+        <script>
+          document.querySelector('button[type="submit"]').addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent form submission to allow for alert display
+
+            // Get the input values
+            const name = document.getElementById('name').value;
+            const service = document.getElementById('service').value;
+            const comments = document.getElementById('comments').value || "No additional comments";
+
+            // Display a confirmation alert with the entered information
+            alert(`Thank you, ${name}!\n\nYou selected the "${service}" service.\n\nAdditional Comments: ${comments}`);
+
+            // Optionally, confirm if the user is ready to proceed
+            const confirmProceed = confirm("Do you want to submit this information?");
+            if (confirmProceed) {
+              alert("Your request has been submitted successfully!");
+              // You can add form submission logic here if needed
+            } else {
+              alert("Submission cancelled.");
+            }
+          });
+        </script>
       </fieldset>
     </form>
   </section>
 </main>
+
 
 <footer class="bg-dark text-white py-5">
   <div class="container">
