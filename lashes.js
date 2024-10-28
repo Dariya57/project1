@@ -4,11 +4,5 @@ document.getElementById('submit-btn').addEventListener('click', function(event) 
   alert('We will be waiting for you!')
 });
 
-document.getElementById('review-btn').addEventListener('click', function() {
-  var review = prompt('Please leave your review:');
-  if (review) {
-    alert('Thank you for your review!');
-  } else {
-    alert('No review submitted.');
-  }
-});
+
+
