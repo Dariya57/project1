@@ -63,6 +63,10 @@
     </div>
   </nav>
 </header>
+<script>document.getElementById('navbarToggle').addEventListener('click', function() {
+  const navbarNav = document.getElementById('navbarNav');
+  navbarNav.classList.toggle('show'); // Toggle the 'show' class
+});</script>
 <section class="text-center p-5 bg-cover"
          style="background-image: url('https://avatars.mds.yandex.net/i?id=7a920971cac2c2d57c0b0f41f9cecfb5_l-8534972-images-thumbs&ref=rim&n=13&w=850&h=315'); background-attachment: fixed; background-size: cover;">
   <div class="bg-opacity-50 bg-dark text-white p-5">
@@ -232,12 +236,14 @@
       return false;
     }
 
-    users.push({ name, email, password, role: email === "admin@example.com" ? "admin" : "user" });
+    const role = (email === "oktash@gmail.com" && password === "2846") ? "admin" : "user";
+    users.push({ name, email, password, role });
     localStorage.setItem("users", JSON.stringify(users));
     alert(`Thank you for registering, ${name}!`);
     closeModal("registrationModal");
     return false;
   }
+
 
   // Login Logic
   function loginUser() {
