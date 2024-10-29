@@ -39,7 +39,7 @@
 </header>
 
 <main class="text-center p-5 bg-cover"
-         style="background-image: url('https://avatars.mds.yandex.net/i?id=7a920971cac2c2d57c0b0f41f9cecfb5_l-8534972-images-thumbs&ref=rim&n=13&w=850&h=315'); background-attachment: fixed; background-size: cover;">
+      style="background-image: url('https://avatars.mds.yandex.net/i?id=7a920971cac2c2d57c0b0f41f9cecfb5_l-8534972-images-thumbs&ref=rim&n=13&w=850&h=315'); background-attachment: fixed; background-size: cover;">
   <div class="bg-opacity-50 bg-dark text-white p-5">
     <h2>Nail Services</h2>
     <p class="lead">Indulge in our luxurious nail treatments and designs.</p>
@@ -88,6 +88,94 @@
     <p id="total-price">Total Price: 0₸</p>
   </div>
 </main>
+
+<section class="section">
+  <h2 class="text-center">Nail Services</h2>
+  <p class="text-center">Price: 12,000₸ - 20,000₸</p>
+
+  <ul class="list-group list-group-flush text-center mb-4">
+    <li class="list-group-item">Nail Art</li>
+    <li class="list-group-item">Acrylic Nails</li>
+    <li class="list-group-item">Ombre Manicurer</li>
+    <li class="list-group-item">French Manicure</li>
+  </ul>
+
+  <form id="bookingForm" action="submit_form.php" method="post" onsubmit="return confirmSubmission()">
+    <fieldset class="border p-4 rounded">
+      <legend class="form-legend mb-4 text-center">Book a Nail Appointment</legend>
+      <div class="mb-3">
+        <label for="name" class="form-label">Name:</label>
+        <input type="text" id="name" name="name" class="form-control" required>
+      </div>
+
+      <div class="mb-3">
+        <label for="service" class="form-label">Select Service:</label>
+        <select id="service" name="service" class="form-select">
+          <option value="gel-manicure">Nail Art</option>
+          <option value="acrylic-nails">Acrylic Nails</option>
+          <option value="dip-powder">Ombre Manicure</option>
+          <option value="french-manicure">French Manicure</option>
+        </select>
+      </div>
+
+      <div class="mb-3">
+        <label for="comments" class="form-label">Additional Comments:</label>
+        <textarea id="comments" name="comments" rows="4" class="form-control"></textarea>
+      </div>
+
+      <button type="submit" class="btn btn-primary">Submit</button>
+
+      <script src="styleB.js"></script>
+      <script>
+        document.querySelector('button[type="submit"]').addEventListener('click', function(event) {
+          event.preventDefault();
+
+          const name = document.getElementById('name').value;
+          const service = document.getElementById('service').value;
+          const comments = document.getElementById('comments').value || "No additional comments";
+
+
+          alert(`Thank you, ${name}!\n\nYou selected the "${service}" service.\n\nAdditional Comments: ${comments}`);
+
+          const confirmProceed = confirm("Do you want to submit this information?");
+          if (confirmProceed) {
+            alert("Your request has been submitted successfully!");
+          } else {
+            alert("Submission cancelled.");
+          }
+        });
+      </script>
+    </fieldset>
+  </form>
+</section>
+
+<footer class="bg-dark text-white py-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4">
+        <h5>Contact Us</h5>
+        <p>Email: <a href="mailto:zhadylbekova@gmail.com" class="text-white">zhadylbekova@gmail.com</a><br>Phone: +7 778 598 70 70</p>
+        <p>D.Oktash, Z.Adylbekova, M.Yakhiyayeva</p>
+      </div>
+      <div class="col-lg-4">
+        <h5>Social Media</h5>
+        <ul class="list-unstyled">
+          <li><a href="https://www.instagram.com/ainalayyn_" class="text-white">Instagram</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-4">
+        <h5>Opening Hours</h5>
+        <ul class="list-unstyled">
+          <li>Mon-Fri: 9 AM - 7 PM</li>
+          <li>Sat-Sun: 10 AM - 6 PM</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="serviceCard.js"></script>
+</body>
+</html>
 
 <section class="section">
   <h2 class="text-center">Nail Services</h2>

@@ -50,7 +50,7 @@
   <div class="row my-4">
     <div class="col-md-3 col-sm-6 mb-3">
       <img src="https://classiceyebrows.com.au/wp-content/uploads/2023/09/Book-Now-3.png" class="img-fluid fixed-size" alt="Classic Eyebrow Shaping">
-   <button onclick="addToBasket('Classic Eyebrow Shaping',12000)">Classic Eyebrow Shaping -12000₸</button>
+      <button onclick="addToBasket('Classic Eyebrow Shaping',12000)">Classic Eyebrow Shaping -12000₸</button>
     </div>
     <div class="col-md-3 col-sm-6 mb-3">
       <img src="https://hdbrows.com/media/amasty/blog/high-definition-brows.jpeg" class="img-fluid fixed-size" alt="High-Definition Eyebrow Shaping">
@@ -78,83 +78,83 @@
   </div>
 </main>
 
-  <section class="section text-center">
-    <p class="price-range">Price: 12,000₸ - 27,000₸</p>
-    <p>Get a sharp, defined look with our high-definition eyebrow shaping, perfect for special occasions or a standout daily look.</p>
-    <blockquote class="blockquote text-center my-4">
-      "Well-shaped eyebrows frame the face and enhance your natural beauty."
-    </blockquote>
+<section class="section text-center">
+  <p class="price-range">Price: 12,000₸ - 27,000₸</p>
+  <p>Get a sharp, defined look with our high-definition eyebrow shaping, perfect for special occasions or a standout daily look.</p>
+  <blockquote class="blockquote text-center my-4">
+    "Well-shaped eyebrows frame the face and enhance your natural beauty."
+  </blockquote>
 
-    <ul class="list-group list-group-flush text-center mb-4">
-      <li class="list-group-item">Classic Eyebrow Shaping</li>
-      <li class="list-group-item">High-Definition Eyebrow Shaping</li>
-      <li class="list-group-item">Eyebrow Threading</li>
-      <li class="list-group-item">Eyebrow Lamination</li>
-    </ul>
+  <ul class="list-group list-group-flush text-center mb-4">
+    <li class="list-group-item">Classic Eyebrow Shaping</li>
+    <li class="list-group-item">High-Definition Eyebrow Shaping</li>
+    <li class="list-group-item">Eyebrow Threading</li>
+    <li class="list-group-item">Eyebrow Lamination</li>
+  </ul>
 
-    <dl class="row my-5">
-      <dt class="col-sm-4">Classic Eyebrow Shaping</dt>
-      <dd class="col-sm-8">Traditional shaping for a natural and everyday look.</dd>
+  <dl class="row my-5">
+    <dt class="col-sm-4">Classic Eyebrow Shaping</dt>
+    <dd class="col-sm-8">Traditional shaping for a natural and everyday look.</dd>
 
-      <dt class="col-sm-4">High-Definition Eyebrow Shaping</dt>
-      <dd class="col-sm-8">Bold shaping for a sharp, defined look.</dd>
+    <dt class="col-sm-4">High-Definition Eyebrow Shaping</dt>
+    <dd class="col-sm-8">Bold shaping for a sharp, defined look.</dd>
 
-      <dt class="col-sm-4">Eyebrow Threading</dt>
-      <dd class="col-sm-8">Precise threading technique for a clean finish.</dd>
+    <dt class="col-sm-4">Eyebrow Threading</dt>
+    <dd class="col-sm-8">Precise threading technique for a clean finish.</dd>
 
-      <dt class="col-sm-4">Eyebrow Lamination</dt>
-      <dd class="col-sm-8">Achieve a smooth, sleek brow shape for up to 6 weeks, giving you a naturally polished appearance.</dd>
-    </dl>
+    <dt class="col-sm-4">Eyebrow Lamination</dt>
+    <dd class="col-sm-8">Achieve a smooth, sleek brow shape for up to 6 weeks, giving you a naturally polished appearance.</dd>
+  </dl>
 
-    <form id="bookingForm" action="submit_form.php" method="post" class="text-start" onsubmit="return confirmSubmission()">
-      <fieldset class="border p-4 rounded">
-        <legend class="form-legend mb-4">Book an Eyebrow Shaping Appointment</legend>
+  <form id="bookingForm" action="submit_form.php" method="post" class="text-start" onsubmit="return confirmSubmission()">
+    <fieldset class="border p-4 rounded">
+      <legend class="form-legend mb-4">Book an Eyebrow Shaping Appointment</legend>
 
-        <div class="mb-3">
-          <label for="name" class="form-label">Name:</label>
-          <input type="text" id="name" name="name" class="form-control" required>
-        </div>
+      <div class="mb-3">
+        <label for="name" class="form-label">Name:</label>
+        <input type="text" id="name" name="name" class="form-control" required>
+      </div>
 
-        <div class="mb-3">
-          <label for="service" class="form-label">Select Service:</label>
-          <select id="service" name="service" class="form-select">
-            <option value="classic">Classic Eyebrow Shaping</option>
-            <option value="hd">High-Definition Eyebrow Shaping</option>
-            <option value="threading">Eyebrow Threading</option>
-            <option value="lamination">Eyebrow Lamination</option>
-          </select>
-        </div>
+      <div class="mb-3">
+        <label for="service" class="form-label">Select Service:</label>
+        <select id="service" name="service" class="form-select">
+          <option value="classic">Classic Eyebrow Shaping</option>
+          <option value="hd">High-Definition Eyebrow Shaping</option>
+          <option value="threading">Eyebrow Threading</option>
+          <option value="lamination">Eyebrow Lamination</option>
+        </select>
+      </div>
 
-        <div class="mb-3">
-          <label for="comments" class="form-label">Additional Comments:</label>
-          <textarea id="comments" name="comments" rows="4" class="form-control"></textarea>
-        </div>
+      <div class="mb-3">
+        <label for="comments" class="form-label">Additional Comments:</label>
+        <textarea id="comments" name="comments" rows="4" class="form-control"></textarea>
+      </div>
 
-        <button type="submit" class="btn btn-primary">Submit</button>
-        <script src="styleB.js"></script>
-        <script>
-          document.querySelector('button[type="submit"]').addEventListener('click', function(event) {
-            event.preventDefault();
+      <button type="submit" class="btn btn-primary">Submit</button>
+      <script src="styleB.js"></script>
+      <script>
+        document.querySelector('button[type="submit"]').addEventListener('click', function(event) {
+          event.preventDefault();
 
-            const name = document.getElementById('name').value;
-            const service = document.getElementById('service').value;
-            const comments = document.getElementById('comments').value || "No additional comments";
+          const name = document.getElementById('name').value;
+          const service = document.getElementById('service').value;
+          const comments = document.getElementById('comments').value || "No additional comments";
 
 
-            alert(`Thank you, ${name}!\n\nYou selected the "${service}" service.\n\nAdditional Comments: ${comments}`);
+          alert(`Thank you, ${name}!\n\nYou selected the "${service}" service.\n\nAdditional Comments: ${comments}`);
 
-            const confirmProceed = confirm("Do you want to submit this information?");
-            if (confirmProceed) {
-              alert("Your request has been submitted successfully!");
+          const confirmProceed = confirm("Do you want to submit this information?");
+          if (confirmProceed) {
+            alert("Your request has been submitted successfully!");
 
-            } else {
-              alert("Submission cancelled.");
-            }
-          });
-        </script>
-      </fieldset>
-    </form>
-  </section>
+          } else {
+            alert("Submission cancelled.");
+          }
+        });
+      </script>
+    </fieldset>
+  </form>
+</section>
 </main>
 
 <footer class="bg-dark text-white py-5">
