@@ -1,3 +1,9 @@
+
+
+
+
+
+
 var firstName = prompt("Enter your first name:");
 var lastName = prompt("Enter your last name:");
 var birthDate = prompt("Enter your age:");
@@ -32,14 +38,6 @@ if (isMultipleOf5 || isGreaterThan10) {
 
 
 var numberInput = Number(prompt("Enter a number:"));
-var stringInput = prompt("Enter a string:");
-var booleanInput = confirm("Is this true? (OK for 'yes', Cancel for 'no')");
-alert("Type of number: " + typeof numberInput);
-alert("Type of string: " + typeof stringInput);
-alert("Type of boolean value: " + typeof booleanInput);
-
-
-var numberInput = prompt("Enter a number:");
 var stringInput = prompt("Enter a string:");
 var booleanInput = confirm("Is this true? (OK for 'yes', Cancel for 'no')");
 alert("Type of number: " + typeof numberInput);
@@ -82,7 +80,7 @@ var user = {
   age: age,
   hobby: hobby
 };
-alert("User details: " + JSON.stringify(user));
+alert("User details: Name: " + user.name + ", Age: " + user.age + ", Hobby: " + user.hobby);
 
 
 var firstNumber = prompt("Enter the first number:");
