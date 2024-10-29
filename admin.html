@@ -4,28 +4,51 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Admin Panel</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <script src="admin.js" defer></script>
-</head>
-<body>
-<div class="admin-container">
-  <h1>Admin Panel</h1>
-  <table id="userTable">
-    <thead>
-    <tr>
-      <th>First Name</th>
-      <th>Middle Name</th>
-      <th>Last Name</th>
-      <th>Email</th>
-      <th>Password</th>
-      <th>Actions</th>
-    </tr>
-    </thead>
-    <tbody id="userTableBody">
 
-    </tbody>
-  </table>
-  <p id="adminMessage" class="message"></p>
+  <style>
+    .bg-purple {
+      background-color: #6f42c1;
+    }
+    .text-purple {
+      color: #6f42c1;
+    }
+    .alert-purple {
+      background-color: #f3e8ff;
+      color: #6f42c1;
+    }
+  </style>
+</head>
+<body class="bg-light">
+<div class="container my-5">
+  <div class="card shadow">
+    <div class="card-header bg-purple text-white">
+      <h1 class="h3 mb-0">Admin Panel</h1>
+    </div>
+    <div class="card-body">
+
+      <table class="table table-striped table-hover" id="userTable">
+        <thead style="background-color: #d9b3ff;">
+        <tr>
+          <th scope="col">Name</th>
+          <th scope="col">Email</th>
+          <th scope="col">Password</th>
+          <th scope="col">Actions</th>
+        </tr>
+        </thead>
+        <tbody id="userTableBody">
+
+        </tbody>
+      </table>
+
+      <p id="adminMessage" class="alert alert-purple mt-4" style="display: none;"></p>
+    </div>
+  </div>
 </div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

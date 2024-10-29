@@ -40,6 +40,17 @@
       text-decoration: none;
       cursor: pointer;
     }
+
+     .navbar-nav {
+       flex-direction: column;
+     }
+    .navbar-collapse {
+      display: none;
+    }
+    .navbar-collapse.show {
+      display: block;
+    }
+
   </style>
 </head>
 <body>
@@ -47,30 +58,36 @@
   <h1 class="display-4">Beauty Salon</h1>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" id="navbarToggle" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item"><a class="nav-link" href="nails.html">Nails</a></li>
-          <li class="nav-item"><a class="nav-link" href="Hair.html">Hair</a></li>
-          <li class="nav-item"><a class="nav-link" href="Eyebrow.html">Eyebrows</a></li>
+          <li class="nav-item"><a class="nav-link" href="hair.html">Hair</a></li>
+          <li class="nav-item"><a class="nav-link" href="eyebrow.html">Eyebrows</a></li>
           <li class="nav-item"><a class="nav-link" href="lashes.html">Lashes</a></li>
-          <li class="nav-item"><a class="nav-link" href="Makeup.html">Makeup</a></li>
-          <li class="nav-item"><a class="nav-link" href="GlamBag.html">Glam Bag</a></li>
-
+          <li class="nav-item"><a class="nav-link" href="makeup.html">Makeup</a></li>
         </ul>
       </div>
     </div>
   </nav>
 </header>
+
+<script>
+  // JavaScript to toggle the navbar
+  document.getElementById('navbarToggle').addEventListener('click', function() {
+    const navbarNav = document.getElementById('navbarNav');
+    navbarNav.classList.toggle('show'); // Toggle the 'show' class
+  });
+</script>
 <section class="text-center p-5 bg-cover"
          style="background-image: url('https://avatars.mds.yandex.net/i?id=7a920971cac2c2d57c0b0f41f9cecfb5_l-8534972-images-thumbs&ref=rim&n=13&w=850&h=315'); background-attachment: fixed; background-size: cover;">
   <div class="bg-opacity-50 bg-dark text-white p-5">
     <h2>Welcome to Our Beauty Salon</h2>
     <p class="lead">Experience the best beauty treatments in town.</p>
     <button id="registerBtn" class="btn btn-outline-light btn-lg">Register</button>
+    <button id="loginBtn" class="btn btn-outline-light btn-lg">Login</button>
   </div>
 </section>
 <section class="container my-5">
@@ -161,30 +178,165 @@
     </div>
   </div>
 </footer>
+</div>
+</section>
 
-
+<!-- Registration Modal -->
 <div id="registrationModal" class="modal">
   <div class="modal-content">
-    <span class="close" onclick="closeRegistrationModal()">&times;</span>
+    <span class="close" onclick="closeModal('registrationModal')">&times;</span>
     <h2>Register</h2>
-    <form onsubmit="return validateRegistrationForm()">
+    <form onsubmit="return registerUser()">
       <div class="mb-3">
-        <label for="name" class="form-label">Name</label>
-        <input type="text" class="form-control" id="name" required>
+        <label for="regName" class="form-label">Name</label>
+        <input type="text" class="form-control" id="regName" required>
       </div>
       <div class="mb-3">
-        <label for="email" class="form-label">Email</label>
-        <input type="email" class="form-control" id="email" required>
+        <label for="regEmail" class="form-label">Email</label>
+        <input type="email" class="form-control" id="regEmail" required>
       </div>
       <div class="mb-3">
-        <label for="phone" class="form-label">Phone</label>
-        <input type="tel" class="form-control" id="phone" required>
+        <label for="regPassword" class="form-label">Password</label>
+        <input type="password" class="form-control" id="regPassword" required>
       </div>
       <button type="submit" class="btn btn-primary">Submit</button>
     </form>
   </div>
 </div>
 
+<!-- Login Modal -->
+<div id="loginModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('loginModal')">&times;</span>
+    <h2>Login</h2>
+    <form onsubmit="return loginUser()">
+      <div class="mb-3">
+        <label for="loginEmail" class="form-label">Email</label>
+        <input type="email" class="form-control" id="loginEmail" required>
+      </div>
+      <div class="mb-3">
+        <label for="loginPassword" class="form-label">Password</label>
+        <input type="password" class="form-control" id="loginPassword" required>
+      </div>
+      <button type="submit" class="btn btn-primary">Login</button>
+      <div id="loginMessage"></div>
+    </form>
+  </div>
+</div>
+
+<script>
+  // Open Modals
+  document.getElementById("registerBtn").onclick = function() {
+    document.getElementById("registrationModal").style.display = "block";
+  };
+  document.getElementById("loginBtn").onclick = function() {
+    document.getElementById("loginModal").style.display = "block";
+  };
+
+  // Close Modal
+  function closeModal(modalId) {
+    document.getElementById(modalId).style.display = "none";
+  }
+
+  // Registration Logic
+  function registerUser() {
+    const name = document.getElementById("regName").value;
+    const email = document.getElementById("regEmail").value;
+    const password = document.getElementById("regPassword").value;
+
+    let users = JSON.parse(localStorage.getItem("users")) || [];
+    if (users.some(user => user.email === email)) {
+      alert("User already exists");
+      return false;
+    }
+
+    const role = (email === "Admin@gmail.com" && password === "2846") ? "admin" : "user";
+    users.push({ name, email, password, role });
+    localStorage.setItem("users", JSON.stringify(users));
+    alert(`Thank you for registering, ${name}!`);
+    closeModal("registrationModal");
+    return false;
+  }
+
+
+  // Login Logic
+  function loginUser() {
+    const email = document.getElementById("loginEmail").value;
+    const password = document.getElementById("loginPassword").value;
+
+    const users = JSON.parse(localStorage.getItem("users")) || [];
+    const user = users.find(u => u.email === email && u.password === password);
+
+    if (user) {
+      sessionStorage.setItem("userRole", user.role);
+      alert(`Welcome ${user.role === "admin" ? "Admin" : "User"}!`);
+      if (user.role === "admin") {
+        window.location.href = "admin.html";  // Redirect to Admin Panel
+      } else {
+        window.location.href = "index.html";  // Redirect to User Dashboard
+      }
+    } else {
+      document.getElementById("loginMessage").innerText = "Invalid email or password.";
+    }
+    closeModal("loginModal");
+    return false;
+  }
+
+  // Close Modals on Outside Click
+  window.onclick = function(event) {
+    if (event.target.classList.contains("modal")) {
+      event.target.style.display = "none";
+    }
+  };
+  function registerUser() {
+    const name = document.getElementById("regName").value;
+    const email = document.getElementById("regEmail").value;
+    const password = document.getElementById("regPassword").value;
+
+    let users = JSON.parse(localStorage.getItem("users")) || [];
+    if (users.some(user => user.email === email)) {
+      alert("User already exists");
+      return false;
+    }
+
+    const role = (email === "Admin@gmail.com" && password === "2846") ? "admin" : "user";
+    users.push({ name, email, password, role });
+    localStorage.setItem("users", JSON.stringify(users));
+    alert(`Thank you for registering, ${name}!`);
+    closeModal("registrationModal");
+    return false;
+  }
+
+  // Login Logic
+  function loginUser() {
+    const email = document.getElementById("loginEmail").value;
+    const password = document.getElementById("loginPassword").value;
+
+    const users = JSON.parse(localStorage.getItem("users")) || [];
+    const user = users.find(u => u.email === email && u.password === password);
+
+    if (user) {
+      sessionStorage.setItem("userRole", user.role);
+      alert(`Welcome ${user.role === "admin" ? "Admin" : "User"}!`);
+      if (user.role === "admin") {
+        window.location.href = "admin.html";  // Redirect to Admin Panel
+      } else {
+        window.location.href = "index.html";  // Redirect to User Dashboard
+      }
+    } else {
+      document.getElementById("loginMessage").innerText = "Invalid email or password.";
+    }
+    closeModal("loginModal");
+    return false;
+  }
+
+  // Close Modals on Outside Click
+  window.onclick = function(event) {
+    if (event.target.classList.contains("modal")) {
+      event.target.style.display = "none";
+    }
+  }
+</script>
 <script>
 
   document.getElementById("registerBtn").onclick = function() {
@@ -197,25 +349,23 @@
   }
 
 
-  function validateRegistrationForm() {
-    const name = document.getElementById("name").value;
-    const email = document.getElementById("email").value;
-    const phone = document.getElementById("phone").value;
+    function validateRegistrationForm() {
+      const name = document.getElementById("name").value;
+      const email = document.getElementById("email").value;
+      const phone = document.getElementById("phone").value;
 
-
-
-    alert(`Thank you for registering, ${name}!`);
-    closeRegistrationModal();
-    return false;
-  }
-
-  window.onclick = function(event) {
-    const modal = document.getElementById("registrationModal");
-    if (event.target === modal) {
+      alert(`Thank you for registering, ${name}!`);
       closeRegistrationModal();
+      return false;
     }
-  }
+
+    window.onclick = function(event) {
+      const modal = document.getElementById("registrationModal");
+      if (event.target === modal) {
+        closeRegistrationModal();
+      }
+    }
 </script>
 </body>
 </html>
-
+
