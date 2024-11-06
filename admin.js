@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function() {
         <td><input type="text" value="${user.lastName}" data-index="${index}" data-field="surname"></td>
         <td><input type="text" value="${user.dob}" data-index="${index}" data-field="date"></td>
         <td><input type="text" value="${user.email}" data-index="${index}" data-field="email"></td>
-        <td><input type="text" value="${user.phone}" data-index="${index}" data-field="email"></td>
+        <td><input type="text" value="${user.phone}" data-index="${index}" data-field="phone"></td>
         <td>
         <input type="password" class="form-control" value="${user.password}" id="passwordInput${index}" readonly>
         <button onclick="togglePasswordVisibility(${index})" class="btn btn-sm btn-secondary mt-2">Show/Hide</button>
@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
   window.editUser = function(index) {
     const users = JSON.parse(localStorage.getItem("users")) || [];
-    const fields = ["name", "email", "password"];
+    const fields = ["name", "surname", "date", "email", "phone", "password"];
     fields.forEach(field => {
       const input = document.querySelector(`input[data-index="${index}"][data-field="${field}"]`);
       users[index][field] = input.value;
@@ -50,13 +50,31 @@ document.addEventListener("DOMContentLoaded", function() {
     loadUsers();
   };
 
+
   window.deleteUser = function(index) {
-    let users = JSON.parse(localStorage.getItem("users")) || [];
-    users.splice(index, 1);
-    localStorage.setItem("users", JSON.stringify(users));
-    document.getElementById("adminMessage").innerText = "User deleted successfully.";
-    loadUsers();
+    if (confirm("Are you sure you want to DELETE this user?")) {
+      let users = JSON.parse(localStorage.getItem("users")) || [];
+      users.splice(index, 1);
+      localStorage.setItem("users", JSON.stringify(users));
+      document.getElementById("adminMessage").innerText = "User deleted successfully.";
+      document.getElementById("adminMessage").style.display = "block";
+      loadUsers();
+    }
   };
+
+
+
+  document.getElementById("searchInput").addEventListener("input", function() {
+    const filter = this.value.toLowerCase();
+    const rows = document.querySelectorAll("#userTableBody tr");
+
+    rows.forEach(row => {
+      const columns = Array.from(row.querySelectorAll("input"));
+      const match = columns.some(input => input.value.toLowerCase().includes(filter));
+      row.style.display = match ? "" : "none";
+    });
+  });
+
 
   loadUsers();
 });
