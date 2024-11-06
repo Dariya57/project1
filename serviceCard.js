@@ -1,8 +1,33 @@
-let selectedServices = [];
+let selectedServices = JSON.parse(localStorage.getItem("selectedServices")) || [];
+
 
 function addToBasket(service, price) {
-  selectedServices.push({ service, price });
-  displayBasket();
+  // Get the current cart or initialize an empty array
+  let cart = JSON.parse(localStorage.getItem("selectedServices")) || [];
+
+  // Check if item already exists in the cart
+  let existingItem = cart.find(item => item.name === service);
+  // existingItem = undefined || {service: "Bridal Makeup", price: 50000}
+  console.log(existingItem)
+  if (existingItem) {
+    // If item exists, increase quantity
+    existingItem.quantity += 1;
+  } else {
+    // If item doesn't exist, add new item
+    cart.push({ name: service, price: Number(price), quantity: 1 });
+  }
+
+  // Save updated cart to localStorage
+  localStorage.setItem("selectedServices", JSON.stringify(cart));
+  updateCartTotal();
+}
+
+function updateCartTotal() {
+  let cart = JSON.parse(localStorage.getItem("selectedServices")) || [];
+  console.log(cart)
+  let totalPrice = cart.reduce((sum, item) => sum + item.price, 0);
+  document.querySelectorAll("#cartTotal").innerText = `${totalPrice}`;
+  console.log(totalPrice)
 }
 
 function displayBasket() {
@@ -52,10 +77,12 @@ function displayBasket() {
   totalPriceElement.innerText = `Total Price: ${totalPrice}₸`;
 }
 
-document.querySelectorAll('.add-to-basket').forEach(button => {
-  button.addEventListener('click', () => {
-    const service = button.dataset.service;
-    const price = parseInt(button.dataset.price);
-    addToBasket(service, price);
+// Event listener for add-to-cart buttons
+document.querySelectorAll(".service-button").forEach(button => {
+  button.addEventListener("click", (event) => {
+    const itemName = event.target.getAttribute("data-item-name");
+    const price = event.target.getAttribute("data-price");
+    addToBasket(itemName, price);
   });
 });
+updateCartTotal()

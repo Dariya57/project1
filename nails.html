@@ -5,32 +5,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Nails Services</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <style>
-    .fixed-size {
-      width: 100%;
-      height: 250px;
-      object-fit: cover;
-    }
-  </style>
+  <link rel="stylesheet" href="img.css">
+  <script src="ft.js"></script>
 </head>
 <body>
 <header class="bg-light py-4 text-center">
   <h1 class="display-4">Beauty Salon</h1>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" id="navbarToggle" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link active" href="nails.html">Nails</a></li>
-          <li class="nav-item"><a class="nav-link" href="Hair.html">Hair</a></li>
-          <li class="nav-item"><a class="nav-link" href="Eyebrow.html">Eyebrows</a></li>
+          <li class="nav-item"><a class="nav-link" href="nails.html">Nails</a></li>
+          <li class="nav-item"><a class="nav-link active" href="hair.html">Hair</a></li>
+          <li class="nav-item"><a class="nav-link" href="eyebrow.html">Eyebrows</a></li>
           <li class="nav-item"><a class="nav-link" href="lashes.html">Lashes</a></li>
-          <li class="nav-item"><a class="nav-link" href="Makeup.html">Makeup</a></li>
-
+          <li class="nav-item"><a class="nav-link" href="makeup.html">Makeup</a></li>
+          <li class="nav-item">
+            <a class="nav-link" href="./glambag.html">
+              <span class="me-2"> <strong> My Selections </strong></span>
+            </a>
+          </li>
         </ul>
       </div>
     </div>
@@ -53,40 +51,30 @@
     <div class="col-md-3 col-sm-6 mb-3">
       <div class="service-item">
         <img src="https://freyadubai.com/wp-content/uploads/2022/09/20-Nail-Art.jpg" class="img-fluid fixed-size" alt="Gel Manicure">
-        <button onclick="addToBasket('Nail Art', 15000)">Nail Art - 15000₸</button>
+       <button class="service-button" data-item-name="Nail Art" data-price="15000">Nail Art - 15000₸</button>
       </div>
     </div>
     <div class="col-md-3 col-sm-6 mb-3">
       <div class="service-item">
         <img src="https://www.byrdie.com/thmb/Caekpto3v4aCiNPndOr2RCnzKH4=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/296926706_833601220942131_7636151140601809029_n-4a470eb23c0a4a60bcf5991d39dbf8e6.jpg" class="img-fluid fixed-size" alt="Acrylic Nails">
-        <button onclick="addToBasket('Acrylic Nails', 20000)">Acrylic Nails - 20000₸</button>
+        <button class="service-button" data-item-name="Acrylic Nails" data-price="20000">Acrylic Nails - 20000₸</button>
       </div>
     </div>
     <div class="col-md-3 col-sm-6 mb-3">
       <div class="service-item">
         <img src="https://globalfashion.ru/images/blog/articles/DwbeEcaCQkdFnFlsfUWaUUGgYs11XqNdx3ghXJLL.webp" class="img-fluid fixed-size" alt="Dip Powder">
-        <button onclick="addToBasket('Ombre Manicure', 18000)">Ombre Manicure - 18000₸</button>
+        <button class="service-button" data-item-name="Ombre Manicure" data-price="18000">Ombre Manicure - 18000₸</button>
       </div>
     </div>
     <div class="col-md-3 col-sm-6 mb-3">
       <div class="service-item">
         <img src="https://images.squarespace-cdn.com/content/v1/55432595e4b05903a7a1130b/b227e9c5-26bc-40d9-96af-139ae2414874/IMG_8907.jpg" class="img-fluid fixed-size" alt="French Manicure">
-        <button onclick="addToBasket('French Manicure', 12000)">French Manicure - 12000₸</button>
+        <button class="service-button" data-item-name="French Manicure" data-price="12000">French Manicure - 12000₸</button>
       </div>
     </div>
   </div>
 </div>
 
-<main class="main-content container mt-5">
-  <div id="service-card" class="service-card">
-    <h2>
-      <img src="https://files.oaiusercontent.com/file-J6jzGJv4qPh9ytcCtu0PFXza?se=2024-10-28T08%3A41%3A43Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3D096e8cb6-a517-4341-87ee-4364e73daac6.webp&sig=wLVaZXFQHIx490deHZH/7dypCDm95QJwg25Q2YKrTwg%3D" alt="Glam Bag Icon" style="width: 40px; height: 40px; vertical-align: middle; margin-right: 10px;">
-      Glam Bag
-    </h2>
-    <div id="basket"></div>
-    <p id="total-price">Total Price: 0₸</p>
-  </div>
-</main>
 
 <section class="section">
   <h2 class="text-center">Nail Services</h2>
@@ -172,95 +160,10 @@
     </div>
   </div>
 </footer>
-<script src="serviceCard.js"></script>
-</body>
-</html>
-
-<section class="section">
-  <h2 class="text-center">Nail Services</h2>
-  <p class="text-center">Price: 12,000₸ - 20,000₸</p>
-
-  <ul class="list-group list-group-flush text-center mb-4">
-    <li class="list-group-item">Nail Art</li>
-    <li class="list-group-item">Acrylic Nails</li>
-    <li class="list-group-item">Ombre Manicurer</li>
-    <li class="list-group-item">French Manicure</li>
-  </ul>
-
-  <form id="bookingForm" action="submit_form.php" method="post" onsubmit="return confirmSubmission()">
-    <fieldset class="border p-4 rounded">
-      <legend class="form-legend mb-4 text-center">Book a Nail Appointment</legend>
-      <div class="mb-3">
-        <label for="name" class="form-label">Name:</label>
-        <input type="text" id="name" name="name" class="form-control" required>
-      </div>
-
-      <div class="mb-3">
-        <label for="service" class="form-label">Select Service:</label>
-        <select id="service" name="service" class="form-select">
-          <option value="gel-manicure">Nail Art</option>
-          <option value="acrylic-nails">Acrylic Nails</option>
-          <option value="dip-powder">Ombre Manicure</option>
-          <option value="french-manicure">French Manicure</option>
-        </select>
-      </div>
-
-      <div class="mb-3">
-        <label for="comments" class="form-label">Additional Comments:</label>
-        <textarea id="comments" name="comments" rows="4" class="form-control"></textarea>
-      </div>
-
-      <button type="submit" class="btn btn-primary">Submit</button>
-
-      <script src="styleB.js"></script>
-      <script>
-        document.querySelector('button[type="submit"]').addEventListener('click', function(event) {
-          event.preventDefault();
-
-          const name = document.getElementById('name').value;
-          const service = document.getElementById('service').value;
-          const comments = document.getElementById('comments').value || "No additional comments";
 
 
-          alert(`Thank you, ${name}!\n\nYou selected the "${service}" service.\n\nAdditional Comments: ${comments}`);
-
-          const confirmProceed = confirm("Do you want to submit this information?");
-          if (confirmProceed) {
-            alert("Your request has been submitted successfully!");
-          } else {
-            alert("Submission cancelled.");
-          }
-        });
-      </script>
-    </fieldset>
-  </form>
-</section>
-
-<footer class="bg-dark text-white py-5">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-4">
-        <h5>Contact Us</h5>
-        <p>Email: <a href="mailto:zhadylbekova@gmail.com" class="text-white">zhadylbekova@gmail.com</a><br>Phone: +7 778 598 70 70</p>
-        <p>D.Oktash, Z.Adylbekova, M.Yakhiyayeva</p>
-      </div>
-      <div class="col-lg-4">
-        <h5>Social Media</h5>
-        <ul class="list-unstyled">
-          <li><a href="https://www.instagram.com/ainalayyn_" class="text-white">Instagram</a></li>
-        </ul>
-      </div>
-      <div class="col-lg-4">
-        <h5>Opening Hours</h5>
-        <ul class="list-unstyled">
-          <li>Mon-Fri: 9 AM - 7 PM</li>
-          <li>Sat-Sun: 10 AM - 6 PM</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</footer>
-<script src="serviceCard.js"></script>
 <script src="js/app.js"></script>
+<script src="serviceCard.js"></script>
 </body>
 </html>
+

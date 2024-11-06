@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping Cart</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container mt-5">
+  <h2><strong> My Selections </strong> </h2>
+  <ul id="cartItems" class="list-group mb-4"></ul>
+  <div class="d-flex justify-content-between">
+    <h3>Total Price: <span id="totalPrice">0</span> ₸</h3>
+    <button class="btn btn-primary" onclick="checkout()">Checkout</button>
+    <script src="styleB.js"></script>
+  </div>
+</div>
+
+<script>
+  // Function to load and display cart items
+  function loadCart() {
+    // Get cart items from localStorage
+    const cart = JSON.parse(localStorage.getItem("selectedServices")) || [];
+    const cartItemsContainer = document.getElementById("cartItems");
+    let totalPrice = 0;
+
+    // Clear current items
+    cartItemsContainer.innerHTML = "";
+
+    // Loop through items in cart and display them
+    cart.forEach(item => {
+      // Calculate total for each item and add to grand total
+      const itemTotal = item.price * item.quantity;
+      totalPrice += itemTotal;
+
+      // Create item element
+      const itemElement = document.createElement("li");
+      itemElement.className = "list-group-item d-flex justify-content-between align-items-center";
+      itemElement.innerHTML = `
+          <div>
+            <strong>${item.name}</strong> - ${item.price.toLocaleString()} ₸ x ${item.quantity}
+            <br>
+            <small>Total: ${itemTotal.toLocaleString()} ₸</small>
+          </div>
+          <div>
+            <button class="btn btn-sm btn-outline-secondary" onclick="updateQuantity('${item.name}', -1)">-</button>
+            <button class="btn btn-sm btn-outline-secondary" onclick="updateQuantity('${item.name}', 1)">+</button>
+            <button class="btn btn-sm btn-danger" onclick="removeItem('${item.name}')">Remove</button>
+            <script src="styleB.js"
+          </div>
+        `;
+
+      cartItemsContainer.appendChild(itemElement);
+    });
+
+    // Display total price
+    document.getElementById("totalPrice").innerText = totalPrice.toLocaleString();
+  }
+
+  // Function to update item quantity
+  function updateQuantity(itemName, change) {
+    let cart = JSON.parse(localStorage.getItem("selectedServices")) || [];
+    const item = cart.find(i => i.name === itemName);
+
+    if (item) {
+      item.quantity += change;
+      if (item.quantity <= 0) {
+        cart = cart.filter(i => i.name !== itemName); // Remove item if quantity is zero
+      }
+      localStorage.setItem("selectedServices", JSON.stringify(cart));
+      loadCart(); // Reload cart display
+    }
+  }
+
+  // Function to remove an item from the cart
+  function removeItem(itemName) {
+    let cart = JSON.parse(localStorage.getItem("selectedServices")) || [];
+    cart = cart.filter(item => item.name !== itemName);
+    localStorage.setItem("selectedServices", JSON.stringify(cart));
+    loadCart();
+  }
+
+  // Function to checkout and clear cart
+  function checkout() {
+    if (confirm("Are you sure you want to proceed with checkout?")) {
+      localStorage.removeItem("selectedServices");
+      loadCart();
+      alert("Thank you for your purchase!");
+    }
+  }
+
+  // Load cart on page load
+  window.addEventListener("load", loadCart);
+</script>
+</body>
+</html>
+
+
