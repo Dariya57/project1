@@ -120,26 +120,36 @@ function registerUser() {
 // Login Logic
 // Login Logic
 // Login Logic
+// Login Logic
 function loginUser() {
   const email = document.getElementById("loginEmail").value;
   const password = document.getElementById("loginPassword").value;
 
   const users = JSON.parse(localStorage.getItem("users")) || [];
+
+  // Define admin credentials
+  const adminEmail = "Admin@gmail.com";
+  const adminPassword = "2846";
+
+  // Check if the user is the admin first
+  if (email === adminEmail && password === adminPassword) {
+    sessionStorage.setItem("userRole", "admin");
+    alert("Welcome Admin!");
+    window.location.href = "admin.html";  // Redirect to Admin Panel
+    return false;
+  }
+
+  // Find regular users
   const user = users.find(u => u.email === email && u.password === password);
 
   if (user) {
     // Store the user role in session
     sessionStorage.setItem("userRole", user.role);
 
-    if (user.role === "admin") {
-      alert(`Welcome Admin!`);
-      window.location.href = "admin.html";  // Redirect to Admin Panel
-    } else {
-      // Ensure user.name exists before accessing it
-      const userName = user.name ? user.name : "User";  // Fallback to "User" if name is not found
-      alert(`Hello, beauty!`);  // Personalized greeting for non-admin users
-      window.location.href = "index.html";  // Redirect to User Dashboard
-    }
+    // Ensure user.name exists before accessing it
+    const userName = user.name ? user.name : "User";  // Fallback to "User" if name is not found
+    alert(`Hello, ${userName}!`);  // Personalized greeting for non-admin users
+    window.location.href = "index.html";  // Redirect to User Dashboard
   } else {
     // Display alert if login fails
     alert("Invalid email or password. Please try again.");
@@ -148,6 +158,7 @@ function loginUser() {
   closeModal("loginModal");
   return false;  // Prevent form submission to avoid page reload
 }
+
 
 
 
