@@ -135,17 +135,34 @@
     <h2>Register</h2>
     <form onsubmit="return registerUser()">
       <div class="mb-3">
-        <label for="regName" class="form-label">Name</label>
-        <input type="text" class="form-control" id="regName" required>
+        <label for="regFirstName" class="form-label">First Name</label>
+        <input type="text" class="form-control" id="regFirstName" required>
+      </div>
+      <div class="mb-3">
+        <label for="regLastName" class="form-label">Last Name</label>
+        <input type="text" class="form-control" id="regLastName" required>
+      </div>
+      <div class="mb-3">
+        <label for="regDOB" class="form-label">Date of Birth</label>
+        <input type="date" class="form-control" id="regDOB" required>
       </div>
       <div class="mb-3">
         <label for="regEmail" class="form-label">Email</label>
         <input type="email" class="form-control" id="regEmail" required>
       </div>
       <div class="mb-3">
-        <label for="regPassword" class="form-label">Password</label>
-        <input type="password" class="form-control" id="regPassword" required>
+        <label for="regPhone" class="form-label">Phone Number</label>
+        <input type="tel" class="form-control" id="regPhone" pattern="^\+?[0-9]{10,15}$"
+               title="Phone number must start with + and contain 10-15 digits" required>
       </div>
+      <div class="mb-3">
+        <label for="regPassword" class="form-label">Password</label>
+        <input type="password" class="form-control" id="regPassword"
+               pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$"
+               title="Password must be at least 8 characters, include one uppercase letter, one lowercase letter, one number, and one special character."
+               required>
+      </div>
+
       <button type="submit" class="btn btn-primary">Submit</button>
     </form>
   </div>
